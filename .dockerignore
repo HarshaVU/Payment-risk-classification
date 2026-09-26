@@ -1,0 +1,26 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# MLflow
+mlruns/
+
+# Data
+*.csv
+
+# Training / preprocessing scripts
+cmd.txt
+feature engineering.py
+pyspark cleaning.py
+synthetic data.py
+
+# Documents
+*.docx
+*.pdf
+
+# Local development
+.vscode/
+.git/
+.gitignore

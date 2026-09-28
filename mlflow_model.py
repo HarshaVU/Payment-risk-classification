@@ -40,7 +40,13 @@ with mlflow.start_run(run_name="RandomForest_payment_risk") as run:
     )
     model.fit(X_train, y_train)
 
-# Saving the model and encoder for future use as pickle files
+    # Registering the model with MLflow
+    mlflow.sklearn.log_model(model, name="RandomForest_payment_risk_model",
+    registered_model_name="RandomForest_payment_risk_model",
+    skops_trusted_types=["sklearn.tree._tree.Tree"],
+)
+
+    # Saving the model and encoder for future use as pickle files
     joblib.dump(model, "model.pkl")
     joblib.dump(encoder, "encoder.pkl")
 

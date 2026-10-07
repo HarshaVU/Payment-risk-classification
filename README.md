@@ -61,12 +61,19 @@ Send a `POST` request to `/predict`:
 
 ```json
 {
+ "account_number": 1243704,
+  "age": 46,
+  "income": 64181,
   "employment_status": "salaried",
-  "income_band": "medium",
-  "income": 45000,
-  "balance": 2500,
-  "credit_limit": 5000,
-  "num_missed_payments_6m": 2
+  "balance": 608,
+  "credit_limit": 6500,
+  "monthly_payment": 123,
+  "num_missed_payments_6m": 6,
+  "consecutive_payments_on_time": 2,
+  "utilization_ratio": 0.0935,
+  "monthly_income": 5348.42,
+  "income_band": "high",
+  "missed_payment_percentage": 100.0
 }
 ```
 
